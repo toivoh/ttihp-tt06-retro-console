@@ -158,7 +158,7 @@ module raster_scan2 #( parameter X_BITS=9, Y_BITS=8, X_SUBPHASE_BITS=2, Y_SUB_BI
 	//assign new_line0 = enable && phase_x == PHASE_SYNC && x0 == 0;
 
 	wire [1:0] x0_65_adj = x0[6:5] - (phase_x == 0 ? 2'd3 : 2'd0);
-	assign x_cmp = {x0[X_BITS-1:7], x0_65_adj, x0[4:0]};
+	assign x_cmp = {x0[X_BITS-1:8], x0[7] & phase_x, x0_65_adj, x0[4:0]};
 
 	assign scan_flags0[`I_NEW_LINE] = new_line0;
 	assign scan_flags0[`I_LAST_PIXEL] = last_pixel0;
