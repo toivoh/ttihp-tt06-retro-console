@@ -41,4 +41,6 @@ Features:
     - 2nd order low pass filter
       - sweepable volume, cutoff frequency, and resonance
 
-For more details, see https://github.com/toivoh/tt06-retro-console/blob/main/docs/info.md.
+This is the IHP version, which includes a bug fix for the Copper's horizontal compare value. The original version can be found at  https://github.com/toivoh/tt06-retro-console.
+
+For more details, see [docs/info.md](docs/info.md).
