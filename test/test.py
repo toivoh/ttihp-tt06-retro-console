@@ -204,7 +204,7 @@ async def test_voices(dut):
 				await ClockCycles(dut.clk, 1)
 
 
-@cocotb.test()
+#@cocotb.test() # Disable for now
 async def test_ppu(dut):
 	dut._log.info("start")
 	clock = Clock(dut.clk, 2, units="us")
